@@ -1,0 +1,6 @@
+---
+- hosts: all
+  sudo: yes
+  roles:
+  - znzj.ja_jp
+  - sid

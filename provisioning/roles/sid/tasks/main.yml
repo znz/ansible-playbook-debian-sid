@@ -1,0 +1,3 @@
+---
+- include: apt.yml tags=ja_jp_apt_sid
+#- include: packages.yml tags=ja_jp_packages

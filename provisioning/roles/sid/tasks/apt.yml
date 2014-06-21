@@ -1,0 +1,7 @@
+---
+- template: src=sources.list.sid.j2 dest=/etc/apt/sources.list.d/sid.list owner=root group=root mode=0644
+  register: ja_jp_apt_sources_list_sid
+- apt: update_cache=yes
+  when: ja_jp_apt_sources_list_sid|changed
+- apt: update_cache=yes cache_valid_time=3600
+  when: ja_jp_apt_sources_list_sid|skipped
